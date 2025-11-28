@@ -1,0 +1,128 @@
+body {
+  background-color: #000a1f;
+}
+
+.container {
+  margin: 100px 0 0 200px;
+  width: 70%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container img {
+  width: 10%;
+  height: 100%;
+  object-fit:cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.684);
+  transition: all ease-in-out 0.5s;
+}
+
+.container img:hover {
+  width: 40%;
+
+}
+/* /////////////////////////////////////////////////// */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container img:hover {
+    width: 100%;
+  }
+}
+/* /////////////////////////////////////////////////// */
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.6s ease;
+}
+
+.link::before {
+  bottom: 0;
+  left: 0;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+#hire-me {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  color: black;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.6s ease;
+}
+
+#hire-me:hover {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+#hire-me i {
+  margin-right: 0.5rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  padding: 0.5rem;
+  position: relative;
+  transition: 0.35s ease;
+}
+.logo:hover {
+  opacity: 0.5;
+}
+nav,
+nav::before,
+nav::after {
+  padding: 0;
+  margin: 0 ;
+  box-sizing: border-box;
+}
+
+nav {
+  font-family: "SF Pro Text";
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
